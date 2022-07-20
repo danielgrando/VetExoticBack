@@ -12,4 +12,4 @@ app.get('/', (req: Request, res: Response) => {
     return res.json({ 'Online': true, 'Server': 'UP' })
 })
 
-app.listen(3333, () => console.log("Server is running on PORT 3333 "))
+app.listen(process.env.PORT || 3000, () => console.log("Server is running on PORT 3333 "))
