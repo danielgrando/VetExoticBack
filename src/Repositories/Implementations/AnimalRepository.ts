@@ -38,6 +38,15 @@ export default class AnimalRepository implements IAnimalRepository {
 
         })
     }
+
+    async findAnimalDosageByAnimalIdAndMedicineId(animalId: string, medicineId: string): Promise<any> {
+        return await prisma.animalDosage.findMany({
+            where: {
+                animalId,
+                medicineId
+            }
+        })
+    }
 }
 
 

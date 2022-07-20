@@ -69,6 +69,22 @@ class AnimalController {
             errorInRouter(req, res, error)
         }
     }
+
+
+    async findAnimalDosageByAnimalIdAndMedicineId(req: Request, res: Response) {
+        try {
+            const { animalId, medicineId } = req.params
+
+            const animalRepository = new AnimalRepository()
+
+            const response = await animalRepository.findAnimalDosageByAnimalIdAndMedicineId(animalId, medicineId)
+
+            return res.json(response)
+        } catch (error) {
+            errorInRouter(req, res, error)
+        }
+    }
+
 }
 
 

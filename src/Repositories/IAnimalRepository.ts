@@ -6,4 +6,5 @@ export interface IAnimalRepository {
     delete(id: string): Promise<void>
     show(): Promise<IAnimal[]>
     findById(id: string): Promise<IAnimal | null>
+    findAnimalDosageByAnimalIdAndMedicineId(animalId: string, medicineId: string): Promise<IAnimal | null>
 }
