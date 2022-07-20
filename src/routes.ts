@@ -33,6 +33,6 @@ animalMedicineRouter.post('/', MedicineController.createMedicineRace)
 
 
 const animalDosageRouter = createRoute('/v1/animal-dosage')
-animalDosageRouter.get('/:animalId', AnimalController.findAnimalDosageByAnimalIdAndMedicineId)
+animalDosageRouter.get('/:animalId/:medicineId', AnimalController.findAnimalDosageByAnimalIdAndMedicineId)
 
 export default router
