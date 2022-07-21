@@ -19,6 +19,7 @@ model AnimalRace {
 
   MedicineRace MedicineRace[]
   AnimalDosage AnimalDosage[]
+
   @@map("animal_race")
 }
 
@@ -40,13 +41,13 @@ model Medicine {
   classification           String
   description              String
   pharmacology             String
-  bibliographic_references String
+  bibliographic_references String[]
   created_at               DateTime @default(now())
   updated_at               DateTime @default(now())
 
-
   MedicineRace MedicineRace[]
   AnimalDosage AnimalDosage[]
+
   @@map("medicines")
 }
 
