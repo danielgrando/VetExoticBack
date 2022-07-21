@@ -41,7 +41,7 @@ model Medicine {
   classification           String
   description              String
   pharmacology             String
-  bibliographic_references String[]
+  bibliographic_references String
   created_at               DateTime @default(now())
   updated_at               DateTime @default(now())
 
