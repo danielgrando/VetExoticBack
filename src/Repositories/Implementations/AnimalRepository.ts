@@ -27,7 +27,7 @@ export default class AnimalRepository implements IAnimalRepository {
     }
 
     async show(): Promise<IAnimal[]> {
-        return await prisma.animalRace.findMany()
+        return await prisma.animalRace.findMany({ orderBy: { id: 'asc' } })
     }
 
     async findById(id: string): Promise<IAnimal | null> {
